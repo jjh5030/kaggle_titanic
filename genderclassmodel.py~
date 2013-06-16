@@ -22,6 +22,8 @@ data = np.array(data) #Then convert from a list to an array
 #information and just say anythng over 30 is just in the last bin so we add a ceiling
 fare_ceiling = 40
 
+print data[data[0::,8].astype(np.float) >= fare_ceiling, 8] = fare_ceiling-1.0
+
 data[data[0::,8].astype(np.float) >= fare_ceiling, 8] = fare_ceiling-1.0
 fare_bracket_size = 10
 number_of_price_brackets = fare_ceiling / fare_bracket_size

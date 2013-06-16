@@ -79,7 +79,7 @@ test_data = np.delete(test_data,[1,4,5,6,8,9],1) #remove the name data, cabin an
 #The data is now ready to go. So lets train then test!
 
 print 'Training '
-forest = RandomForestClassifier(n_estimators=200)
+forest = RandomForestClassifier(n_estimators=150)
 
 forest = forest.fit(train_data[0::,1::],\
                     train_data[0::,0])

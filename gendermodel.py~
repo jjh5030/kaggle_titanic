@@ -39,8 +39,6 @@ men_only_stats = data[0::,3] != "female" #This finds where all the men are
 women_onboard = data[women_only_stats,0].astype(np.float)
 men_onboard = data[men_only_stats,0].astype(np.float)
 
-print women_onboard
-
 proportion_women_survived = np.sum(women_onboard) / np.size(women_onboard)
 proportion_men_survived = np.sum(men_onboard) / np.size(men_onboard)
 
